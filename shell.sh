@@ -32,3 +32,4 @@ gcloud compute ssh jupyter@fastai-vm -- -L 8080:localhost:8080
 
 # SSH
 gcloud compute ssh jupyter@fastai-vm
+cd ~/tutorials/fastai/courses/dl1/

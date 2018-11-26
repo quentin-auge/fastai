@@ -8,6 +8,8 @@ mkdir -p data/
 cd data/
 wget https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/imdb_0.tar
 tar xvf imdb_0.tar
+wget https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/imdb_meta.tar
+tar xvf imdb_meta.tar
 cd imdb/
 mv 0{1,2,3,4,5,6,7}/ train/
 mv 0{8,9}/ test/
