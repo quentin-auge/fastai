@@ -21,7 +21,7 @@ git clone https://github.com/quentin-auge/fastai
 cd fastai/
 git remote add upstream https://github.com/fastai/fastai.git
 pip install graphviz sklearn_pandas isoweek pandas_summary torchtext
-
+sudo apt-get install -y imagemagick
 
 # Local
 cd ~/dl/fastai/courses/dl1/
