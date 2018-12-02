@@ -21,7 +21,7 @@ mkdir -p sample/test/09/
 cp test/09/nm0000009_* sample/test/09/
 
 
-# Exploration & transformation
+# Resizing
 
 # Local
 
@@ -50,3 +50,24 @@ for f in ./*/*.jpg; do
   convert "$f" -resize 224x224^ "./resized/$f"
 done
 
+
+# Apply validation blacklist
+
+# Local
+cd ~/dl/fastai/courses/dl1/data/imdb/train/resized/
+
+# Remote
+cd ~/tutorials/fastai/courses/dl1/data/imdb/train/resized/
+
+mv 06/ old_06/
+mv 07/ old_07/
+mkdir 0{6,7}/
+
+for f in $(cat ../../whitelist_paths_06.txt); do
+  cp -v "old_$f" "$f"
+done
+
+
+for f in $(cat ../../whitelist_paths_07.txt); do
+  cp -v "old_$f" "$f"
+done
