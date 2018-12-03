@@ -48,8 +48,13 @@ mkdir -p resized/0{0,1,2,3,4,5,6,7,8,9}/
 mkdir -p resized/1{0,1,2,3,4,5,6,7,8,9}/
 for f in ./*/*.jpg; do
   echo "$f"
-  convert "$f" -resize 224x224^ "./resized/$f"
+  if [ ! "$f" ]; then
+    convert "$f" -resize 224x224^ "./resized/$f"
+  fi
 done
+
+cd ~/tutorials/fastai/courses/dl1/data/gender/train/resized/
+watch -n 1 'for f in 0* 1*; do echo -n "$f  "; find $f | wc -l; done'
 
 
 # Apply validation blacklist
