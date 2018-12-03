@@ -1,0 +1,6 @@
+/*
+!.gitignore
+!shell.sh
+!get_paths_whitelists.py
+!blacklist*.txt
+!whitelist*.txt
