@@ -6,7 +6,7 @@ pip install jupyter
 ipython kernel install --user --name=fastai
 cd ~/dl/fastai/
 pip install -e .
-pip install bcolz opencv-python seaborn graphviz sklearn_pandas isoweek pandas_summary torchtext
+pip install bcolz opencv-python seaborn graphviz sklearn_pandas isoweek pandas_summary torchtext feather-format
 
 
 # Remote setup
